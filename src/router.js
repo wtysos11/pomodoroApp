@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router/dist/vue-router.esm-bundler'
 import Pomodoro from './views/pomodoro-item.vue'
-import App from './App.vue'
+import Home from './views/home-item.vue'
 
 export default () => createRouter({
   history: createWebHistory(),
@@ -8,7 +8,7 @@ export default () => createRouter({
     {
       path: '/',
       name: 'homepage',
-      component: App,
+      component: Home,
     },
     {
       path: '/pomodoro',
