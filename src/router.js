@@ -1,23 +1,34 @@
 import { createRouter, createWebHistory } from 'vue-router/dist/vue-router.esm-bundler'
-import Home from './views/Home.vue'
+import Pomodoro from './views/pomodoro-item.vue'
+import App from './App.vue'
 
 export default () => createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home,
+      name: 'homepage',
+      component: App,
     },
     {
-      path: '/about',
-      name: 'About',
-      component: () => import('./views/About.vue')
+      path: '/pomodoro',
+      name: 'pomodoro',
+      component: Pomodoro,
     },
     {
-      path: '/contact',
-      name: 'Contact',
-      component: () => import('./views/Contact.vue')
+      path: '/todo',
+      name: 'todo',
+      component: () => import('./views/todo-item.vue')
+    },
+    {
+      path: '/statistic',
+      name: 'statistic',
+      component: () => import('./views/statistic-item.vue')
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: () => import('./views/setting-item.vue')
     },
   ]
 })
